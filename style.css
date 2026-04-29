@@ -1,6 +1,4 @@
-* {
-    border: 1px solid red;
-}
+
 
 *{
     margin:0;
@@ -15,27 +13,115 @@
     --text-color: #2d2d2d;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-header, main, section, article, footer {
-    border: 1px solid red;
-}
-
 main {
     display: flex;
-    flex-direction: column; /* Empilha os blocos (Sobre, Projetos, etc) */
-    align-items: center; /* Centraliza no eixo horizontal */
-    padding: 20px;
+    flex-direction: column;
 }
 
 section {
     max-width: 800px;
     width: 100%;
     margin-bottom: 40px;
+}
+
+.destaque-neon {
+    color: #38E4AE; /* Sua cor Tropical Mint */
+    font-weight: bold;
+    text-shadow: 0 0 5px #38E4AE; /* Leve efeito de brilho */
+}
+
+/* Usando ID para um título específico */
+#titulo-principal {
+    color: #AEDCC0; /* Celadon */
+    font-size: 2.5rem;
+}
+
+body {
+    background-color: #0d1117; /* Um preto azulado profundo */
+    color: #e6edf3;           /* Branco acinzentado para leitura */
+    font-family: 'Courier New', monospace; /* Vibe de terminal/dados */
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centraliza tudo horizontalmente */
+}
+
+.card-cyber {
+    background-color: #161b22;   /* Um tom acima do fundo */
+    border: 1px solid var(--tropical-mint); /* Tua cor neon */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(56, 228, 174, 0.2); /* Brilho neon suave */
+}
+
+/* Todos os títulos h2 serão Celadon */
+h2 {
+    color: var(--celadon);
+}
+
+/* A classe neon será Tropical Mint */
+.neon {
+    color: var(--tropical-mint);
+    text-transform: uppercase;
+}
+
+/* Centraliza os títulos das seções */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Dá um ar mais tecnológico */
+}
+
+/* Garante que o texto dos parágrafos não fique colado */
+p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+header ul {
+    list-style: none; /* Remove as bolinhas */
+    display: flex;    /* Coloca os itens lado a lado */
+    gap: 20px;        /* Espaço entre os itens */
+    padding: 20px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--celadon);
+    font-weight: bold;
+    transition: 0.3s; /* Suaviza a mudança de cor */
+}
+
+header a:hover {
+    color: var(--tropical-mint);
+    text-shadow: 0 0 10px var(--tropical-mint);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; /* Garante que no telemóvel o texto não cole no ecrã */
+}
+
+section {
+    max-width: 800px; /* Largura ideal para leitura */
+    width: 100%;
+    margin-bottom: 60px; /* Espaço entre seções (Sobre, Timeline, etc) */
+}
+
+#conquistas-e-projetos {
+    border-left: 2px solid var(--tropical-mint); /* A linha da timeline */
+    padding-left: 30px;
+    margin-left: 10px; /* Ajuste para não colar no canto */
+}
+
+/* Criar um pequeno detalhe nos títulos da timeline */
+#conquistas-e-projetos article h3::before {
+    content: "▹"; /* Um marcador cyber antes de cada conquista */
+    color: var(--tropical-mint);
+    margin-right: 10px;
 }
 
