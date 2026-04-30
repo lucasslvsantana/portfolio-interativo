@@ -1,4 +1,4 @@
-/* 1. RESET E VARIÁVEIS - A Base de tudo */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 2. ESTRUTURA GLOBAL */
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -32,7 +32,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header fixo e organizado */
+
 header {
     width: 100%;
     padding: 60px 20px;
@@ -59,8 +59,9 @@ header a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 600;
+    font-size: 1.6rem;
     transition: 0.3s;
-    padding: 8px 15px;
+    padding: 12px 25px;
 }
 
 header a:hover {
@@ -68,7 +69,6 @@ header a:hover {
     text-shadow: 0 0 10px var(--tropical-mint);
 }
 
-/* 3. CONTEÚDO PRINCIPAL (MAIN) */
 main {
     width: 100%;
     max-width: 900px;
@@ -91,7 +91,7 @@ h2 {
     text-align: left;
 }
 
-/* 4. CARDS E TIMELINE - O estilo Cyber */
+
 .card-cyber {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -108,7 +108,7 @@ h2 {
     border-color: var(--celadon);
 }
 
-/* Estilo da Linha da Timeline */
+
 #conquistas-e-projetos {
     border-left: 2px solid var(--tropical-mint);
     padding-left: 30px;
@@ -125,7 +125,50 @@ h2 {
     margin-right: 10px;
 }
 
-/* 5. FOOTER E CONTATO */
+.card-cyber .data {
+    display: inline-block;
+    background-color: var(--tropical-mint);
+    color: var(--bg-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--celadon);
+    color: var(--celadon);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+    background-color: var(--celadon);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(174, 220, 192, 0.4);
+}
+
+.icon-btn {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
+}
+
+.btn-github:hover .icon-btn {
+    filter: grayscale(0%) brightness(0);
+}
+
+
 footer {
     width: 100%;
     padding: 80px 20px;
@@ -142,7 +185,7 @@ footer {
     display: inline-block;
 }
 
-/* Ícones das redes sociais */
+
 .social-icon {
     width: 48px;
     height: 48px;
@@ -156,7 +199,7 @@ footer {
     filter: grayscale(0%) brightness(1.2);
 }
 
-/* 6. RESPONSIVIDADE (Ajustes finais) */
+
 @media (max-width: 768px) {
     header h1 { font-size: 2.2rem; }
     h2 { font-size: 1.5rem; }
@@ -164,11 +207,16 @@ footer {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Requisito visual */
-    border: 3px solid var(--tropical-mint);
-    box-shadow: 0 0 20px var(--tropical-mint); /* Efeito Cyber */
-    object-fit: cover; /* Garante que não distorça */
-    margin-bottom: 20px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    border: 10px solid var(--tropical-mint);
+    box-shadow: 0 0 60px rgba(56, 228, 174, 0.7);
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.section-intro {
+    margin-bottom: 40px;
+    display: block;
 }
